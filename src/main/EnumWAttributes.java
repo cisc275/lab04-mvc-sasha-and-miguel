@@ -1,3 +1,9 @@
+/*Miguel Zavala, Sasha Jones
+ * Lecture: CISC275-011
+ * Lab: CISC275-031L
+ * https://github.com/cisc275/lab04-mvc-sasha-and-miguel
+ */
+
 package main;
 
 import java.util.HashMap;
@@ -27,6 +33,7 @@ public class EnumWAttributes {
 //			System.out.println("enum types work in switch statements!");
 //		}
 		
+		/*Main (to start the animation) */
 		Controller controller = new Controller();
 		controller.start();
 

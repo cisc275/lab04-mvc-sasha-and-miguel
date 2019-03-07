@@ -1,5 +1,10 @@
-package main;
+/*Miguel Zavala, Sasha Jones
+ * Lecture: CISC275-011
+ * Lab: CISC275-031L
+ * https://github.com/cisc275/lab04-mvc-sasha-and-miguel
+ */
 
+package main;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -11,7 +16,6 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-//import mainpackage.Animation;
 
 /**
  * View: Contains everything about graphics and images
@@ -40,7 +44,7 @@ public class View extends JFrame{
     	this.getContentPane().add(new Animation());
     	this.setBackground(Color.gray);
     	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    	this.setSize(frameWidth, frameHeight);
+    	this.setSize(this.frameWidth, this.frameHeight);
     	this.setVisible(true);
     }
     
@@ -50,7 +54,7 @@ public class View extends JFrame{
     }
     
     public int getHeight() {
-    	return this.frameWidth;
+    	return this.frameHeight;
     }
     
     public int getImageHeight() {

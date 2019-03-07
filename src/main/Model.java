@@ -1,5 +1,10 @@
-package main;
+/*Miguel Zavala, Sasha Jones
+ * Lecture: CISC275-011
+ * Lab: CISC275-031L
+ * https://github.com/cisc275/lab04-mvc-sasha-and-miguel
+ */
 
+package main;
 import java.awt.Color;
 
 /**
@@ -48,13 +53,17 @@ public class Model{
 			this.xacc = 1;
 		}
 
+		System.out.println("PASSED X");
 		if(this.y<0){
 			this.yacc = 1;
+			System.out.println("Y < 0");
 		}
 		else if(this.y+this.imageHeight>this.frameHeight){
 			System.out.println("TRUE");
 			this.yacc = -1;
 		}
+		System.out.println(this.y+this.imageHeight);
+		System.out.println(this.frameHeight);
 		
 		//Updating the location (adds the x and y accelerations to position)
 		x+=(xIncr*xacc);
