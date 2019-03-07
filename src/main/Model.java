@@ -34,17 +34,12 @@ public class Model{
 		this.imageHeight = imageHeight;
 		
 		
-		//The model's starting position (x,y)
+		//The orc's starting position (x,y)
 		this.y = 0;
 		this.x = 0; 
-		
-		this.direction = Direction.SOUTHEAST; //temporarily have it set to SOUTHEAST
 	}
 
 	public void updateLocationAndDirection() {	
-		System.out.println("X:"+this.xacc);
-		System.out.println("Y:"+this.yacc);
-		
 		//Changes the orc's direction when reaching the JFrame window sides
 		if(this.x+this.imageWidth>this.frameWidth){
 			this.xacc = -1;
@@ -53,17 +48,13 @@ public class Model{
 			this.xacc = 1;
 		}
 
-		System.out.println("PASSED X");
 		if(this.y<0){
 			this.yacc = 1;
-			System.out.println("Y < 0");
 		}
 		else if(this.y+this.imageHeight>this.frameHeight){
-			System.out.println("TRUE");
 			this.yacc = -1;
 		}
-		System.out.println(this.y+this.imageHeight);
-		System.out.println(this.frameHeight);
+
 		
 		//Updating the location (adds the x and y accelerations to position)
 		x+=(xIncr*xacc);

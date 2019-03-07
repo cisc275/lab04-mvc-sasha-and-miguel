@@ -78,9 +78,7 @@ public class View extends JFrame{
     	return this.orcy;
     }
     
-    public void update(int x, int y, Direction direct) {
-    	System.out.println("CALLED");
-    	
+    public void update(int x, int y, Direction direct) {	
     	//updating the orc data
     	this.orcx = x;
     	this.orcy = y;
@@ -117,13 +115,12 @@ public class View extends JFrame{
     				BufferedImage img = createImage(row,column);
     				BufferedImage new_spritesheet[] = new BufferedImage[10];
     				for(int i = 0; i < frameCount; i++) {
-    					System.out.println(i);
     					new_spritesheet[i] = img.getSubimage(imgWidth*i, 0, imgWidth, imgHeight);
     				}
 
-    				System.out.println(new_spritesheet);
+    				/*System.out.println(new_spritesheet);
     				System.out.println(row+","+column);
-    				System.out.println(new_spritesheet);
+    				System.out.println(new_spritesheet);*/
 
     				spritesheets[row][column] = new_spritesheet;
 
@@ -168,11 +165,11 @@ public class View extends JFrame{
     			column_position = Direction.EAST;
     		}
     		try {
-    			System.out.println(row_position.getName());
+    			//System.out.println(row_position.getName());
     			String spritesheet_name = "src/mainpackage/images/orc_forward_"+row_position.getName()+column_position.getName()+".png";
-    			System.out.println(spritesheet_name);
+    			//System.out.println(spritesheet_name);
     			bufferedImage = ImageIO.read(new File(spritesheet_name));
-    			System.out.println(spritesheet_name);
+    			//System.out.println(spritesheet_name);
     			return bufferedImage;
     		} catch (IOException e) {
     			e.printStackTrace();
